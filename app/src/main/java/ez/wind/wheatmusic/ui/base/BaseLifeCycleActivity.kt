@@ -3,7 +3,7 @@ package ez.wind.wheatmusic.ui.base
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import ez.wind.wheatmusic.utils.getClass
-import ez.wind.wheatmusic.vm.BaseViewModel
+import ez.wind.wheatmusic.vm.base.BaseViewModel
 import ez.wind.wheatmusic.vm.BaseViewModelFactory
 
 /**

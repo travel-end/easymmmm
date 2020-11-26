@@ -2,7 +2,8 @@ package ez.wind.wheatmusic.app
 
 import androidx.multidex.MultiDexApplication
 import com.danikula.videocache.HttpProxyCacheServer
-import ez.wind.wheatmusic.utils.FileUtil
+import com.google.gson.Gson
+import ez.wind.wheatmusic.utils.FileUtils
 import ez.wind.wheatmusic.utils.cache.CacheFileNameGenerator
 import java.io.File
 
@@ -13,6 +14,7 @@ import java.io.File
 class WheatApp: MultiDexApplication() {
     companion object {
         private var instances:WheatApp?=null
+        val GSON = Gson()
         fun getInstance():WheatApp {
             if (instances == null) {
                 synchronized(WheatApp::class.java) {
@@ -43,7 +45,7 @@ class WheatApp: MultiDexApplication() {
     private fun newProxy(): HttpProxyCacheServer {
         return HttpProxyCacheServer
             .Builder(this)
-            .cacheDirectory(File(FileUtil.getMusicCacheDir()))
+            .cacheDirectory(File(FileUtils.getMusicCacheDir()))
             .fileNameGenerator(CacheFileNameGenerator())
             .build()
     }

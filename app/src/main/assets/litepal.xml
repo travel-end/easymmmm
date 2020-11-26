@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="dbwheatmusic" />
+    <version value="1" />
+    <list>
+        <mapping class="ez.wind.wheatmusic.model.Music" />
+        <mapping class="ez.wind.wheatmusic.model.Playlist" />
+        <mapping class="ez.wind.wheatmusic.model.MusicToPlaylist" />
+        <mapping class="ez.wind.wheatmusic.model.Album" />
+        <mapping class="ez.wind.wheatmusic.model.Artist" />
+        <mapping class="ez.wind.wheatmusic.model.MessageInfoBean" />
+        <mapping class="ez.wind.wheatmusic.model.UserInfoBean" />
+        <mapping class="ez.wind.wheatmusic.model.SearchHistoryBean" />
+        <mapping class="ez.wind.wheatmusic.model.TasksManagerModel" />
+    </list>
+</litepal>

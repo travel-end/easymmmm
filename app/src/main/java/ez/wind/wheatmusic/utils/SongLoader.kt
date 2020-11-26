@@ -76,4 +76,7 @@ object SongLoader {
             arrayOf("_id", "title", "artist", "album", "duration", "track", "artist_id", "album_id", MediaStore.Audio.Media.DATA, "is_music"),
             selectionStatement, paramArrayOfString, sortOrder)
     }
+    fun updateMusic(music: Music) {
+        DaoLitepal.saveOrUpdateMusic(music)
+    }
 }

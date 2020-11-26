@@ -97,4 +97,7 @@
     <string name="search_content_hint">搜索歌曲/歌手/专辑</string>
     <string name="song_num">%1$d 首</string>
     <string name="default_num">0 首</string>
+    <string name="error_connection">网络连接异常，请稍后重试</string>
+    <string name="setting_key_mobile_wifi">mobile_wifi</string>
+    <string name="setting_key_sound_effect">sound_effect</string>
 </resources>

@@ -1,4 +1,4 @@
-package ez.wind.wheatmusic.vm
+package ez.wind.wheatmusic.vm.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
