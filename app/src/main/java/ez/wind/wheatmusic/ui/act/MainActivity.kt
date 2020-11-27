@@ -7,6 +7,7 @@ import com.google.android.material.navigation.NavigationView
 import ez.wind.wheatmusic.R
 import ez.wind.wheatmusic.ui.base.BaseLifeCycleActivity
 import ez.wind.wheatmusic.ui.frag.MainFragment
+import ez.wind.wheatmusic.utils.LogUtil
 import ez.wind.wheatmusic.utils.NavigationManager
 import ez.wind.wheatmusic.utils.inflate
 import ez.wind.wheatmusic.vm.MainActViewModel
@@ -58,6 +59,7 @@ class MainActivity : BaseLifeCycleActivity<MainActViewModel>(),
 
     private fun isToDeskTop(): Boolean {
         val currentFragment = supportFragmentManager.findFragmentById(R.id.main_Fragment)
+        LogUtil.e("currentFragment$currentFragment")
         return currentFragment is MainFragment
     }
 

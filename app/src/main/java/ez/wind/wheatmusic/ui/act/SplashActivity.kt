@@ -15,23 +15,24 @@ import ez.wind.wheatmusic.R
  * @By Journey 2020/11/25
  * @Description
  */
-class SplashActivity:AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     private val mPermission = arrayOf(
         Manifest.permission.WRITE_EXTERNAL_STORAGE,
         Manifest.permission.READ_EXTERNAL_STORAGE
     )
-    private  val mPermissionCode = 0x122
+    private val mPermissionCode = 0x122
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         ImmersionBar.with(this).transparentBar().init()
         checkPermissions()
     }
+
     private fun checkPermissions() {
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
-            ) != PackageManager.PERMISSION_GRANTED&&
+            ) != PackageManager.PERMISSION_GRANTED &&
             ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.READ_EXTERNAL_STORAGE
@@ -47,6 +48,7 @@ class SplashActivity:AppCompatActivity() {
             }, 1000)
         }
     }
+
     private fun toMain() {
         startActivity(
             Intent(
@@ -56,6 +58,7 @@ class SplashActivity:AppCompatActivity() {
         )
         finish()
     }
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
